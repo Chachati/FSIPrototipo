@@ -28,8 +28,20 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.internacional.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_InternationalFragment)
+        }
+
+        binding.discounts.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_DiscountsFragment)
+        }
+
         binding.nacional.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_FirstFragment_to_nationalFragment)
+        }
+
+        binding.local.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_LocalFragment)
         }
     }
 

@@ -11,22 +11,26 @@
         android:name="com.example.fsiprototipo.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
-
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_InternationalFragment"
+            app:destination="@id/InternationalFragment" />
         <action
             android:id="@+id/action_FirstFragment_to_DiscountsFragment"
             app:destination="@id/DiscountsFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_LocalFragment"
+            app:destination="@id/LocalFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_nationalFragment"
+            app:destination="@id/nationalFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.fsiprototipo.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/InternationalFragment"
+        android:name="com.example.fsiprototipo.InternationalFragment"
+        android:label="@string/international_fragment_label"
+        tools:layout="@layout/fragment_international">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_InternationalFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
     <fragment
@@ -34,9 +38,25 @@
         android:name="com.example.fsiprototipo.DiscountsFragment"
         android:label="@string/discounts_fragment_label"
         tools:layout="@layout/fragment_discounts">
-
         <action
-            android:id="@+id/action_DiscountsFragment_to_FirstFragment2"
+            android:id="@+id/action_DiscountsFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LocalFragment"
+        android:name="com.example.fsiprototipo.LocalFragment"
+        android:label="@string/local_fragment_label" >
+        <action
+            android:id="@+id/action_LocalFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nationalFragment"
+        android:name="com.example.fsiprototipo.NationalFragment"
+        android:label="@string/national_fragment_label"
+        tools:layout="@layout/fragment_national">
+        <action
+            android:id="@+id/action_nationalFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
